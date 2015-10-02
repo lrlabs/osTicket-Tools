@@ -13,6 +13,9 @@ namespace DBLogger
             string ConnectString = "Server=localhost;Database=glpiservice;Uid=root;Pwd=root";
             string query = "SELECT id,name FROM glpi_groups";
 
+            string filePath = "./logs";
+            Directory.CreateDirectory(filePath);
+
             FileStream ostrm;
             StreamWriter writer;
             TextWriter oldOut = Console.Out;
@@ -23,6 +26,7 @@ namespace DBLogger
             try
             {
                 // Filename
+                
                 ostrm = new FileStream(
                     "./logs/" +
                     DateTime.Now.Year
