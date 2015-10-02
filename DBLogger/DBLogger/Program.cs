@@ -26,20 +26,7 @@ namespace DBLogger
             try
             {
                 // Filename
-                
-                ostrm = new FileStream(
-                    "./logs/" +
-                    DateTime.Now.Year
-                    + "" +
-                    DateTime.Now.Month
-                    + "" +
-                    DateTime.Now.Day
-                    + "_" +
-                    DateTime.Now.Hour
-                    + "" +
-                    DateTime.Now.Minute
-                    + "" +
-                    DateTime.Now.Second
+                ostrm = new FileStream("./logs/" + DateTime.Now.Year + "" + DateTime.Now.Month + "" + DateTime.Now.Day + "_" + DateTime.Now.Hour  + "" + DateTime.Now.Minute + "" +               DateTime.Now.Second
                     + ".log",
                     FileMode.OpenOrCreate,
                     FileAccess.Write);
